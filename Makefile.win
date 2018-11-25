@@ -1,0 +1,61 @@
+# Project: Guitar_FinalVersion
+# Makefile created by Dev-C++ 5.5.3
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o tablero.o cuerda.o nota.o cancion.o juego.o score.o nota_verde.o nota_roja.o nota_amarilla.o nota_azul.o nota_naranja.o
+LINKOBJ  = main.o tablero.o cuerda.o nota.o cancion.o juego.o score.o nota_verde.o nota_roja.o nota_amarilla.o nota_azul.o nota_naranja.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -L"C:/SFML-2.3.1/lib" -mwindows  C:/SFML-2.3.1/lib/libFLAC.a C:/SFML-2.3.1/lib/libfreetype.a C:/SFML-2.3.1/lib/libjpeg.a C:/SFML-2.3.1/lib/libogg.a C:/SFML-2.3.1/lib/libopenal32.a C:/SFML-2.3.1/lib/libsfml-audio.a C:/SFML-2.3.1/lib/libsfml-audio-d.a C:/SFML-2.3.1/lib/libsfml-audio-s.a C:/SFML-2.3.1/lib/libsfml-audio-s-d.a C:/SFML-2.3.1/lib/libsfml-graphics.a C:/SFML-2.3.1/lib/libsfml-graphics-d.a C:/SFML-2.3.1/lib/libsfml-graphics-s.a C:/SFML-2.3.1/lib/libsfml-graphics-s-d.a C:/SFML-2.3.1/lib/libsfml-main.a C:/SFML-2.3.1/lib/libsfml-main-d.a C:/SFML-2.3.1/lib/libsfml-network.a C:/SFML-2.3.1/lib/libsfml-network-d.a C:/SFML-2.3.1/lib/libsfml-network-s.a C:/SFML-2.3.1/lib/libsfml-network-s-d.a C:/SFML-2.3.1/lib/libsfml-system.a C:/SFML-2.3.1/lib/libsfml-system-d.a C:/SFML-2.3.1/lib/libsfml-system-s.a C:/SFML-2.3.1/lib/libsfml-system-s-d.a C:/SFML-2.3.1/lib/libsfml-window.a C:/SFML-2.3.1/lib/libsfml-window-d.a C:/SFML-2.3.1/lib/libsfml-window-s.a C:/SFML-2.3.1/lib/libsfml-window-s-d.a C:/SFML-2.3.1/lib/libvorbis.a C:/SFML-2.3.1/lib/libvorbisenc.a C:/SFML-2.3.1/lib/libvorbisfile.a  -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/SFML-2.3.1/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.7.1/include/c++" -I"C:/SFML-2.3.1/include"
+BIN      = Guitar_FinalVersion.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+tablero.o: tablero.cpp
+	$(CPP) -c tablero.cpp -o tablero.o $(CXXFLAGS)
+
+cuerda.o: cuerda.cpp
+	$(CPP) -c cuerda.cpp -o cuerda.o $(CXXFLAGS)
+
+nota.o: nota.cpp
+	$(CPP) -c nota.cpp -o nota.o $(CXXFLAGS)
+
+cancion.o: cancion.cpp
+	$(CPP) -c cancion.cpp -o cancion.o $(CXXFLAGS)
+
+juego.o: juego.cpp
+	$(CPP) -c juego.cpp -o juego.o $(CXXFLAGS)
+
+score.o: score.cpp
+	$(CPP) -c score.cpp -o score.o $(CXXFLAGS)
+
+nota_verde.o: nota_verde.cpp
+	$(CPP) -c nota_verde.cpp -o nota_verde.o $(CXXFLAGS)
+
+nota_roja.o: nota_roja.cpp
+	$(CPP) -c nota_roja.cpp -o nota_roja.o $(CXXFLAGS)
+
+nota_amarilla.o: nota_amarilla.cpp
+	$(CPP) -c nota_amarilla.cpp -o nota_amarilla.o $(CXXFLAGS)
+
+nota_azul.o: nota_azul.cpp
+	$(CPP) -c nota_azul.cpp -o nota_azul.o $(CXXFLAGS)
+
+nota_naranja.o: nota_naranja.cpp
+	$(CPP) -c nota_naranja.cpp -o nota_naranja.o $(CXXFLAGS)
